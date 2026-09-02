@@ -1,0 +1,283 @@
+.cadastro-usuario {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    background: #f5f7fa;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+}
+
+
+.cadastro-usuario-container {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    background: #ffffff;
+
+    border: 2px solid #33095a;
+
+    border-radius: 14px;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 8px 25px rgba(31, 111, 235, 0.12);
+
+}
+
+
+.cadastro-usuario-header {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.cadastro-usuario-header h1 {
+
+    margin: 0 0 8px;
+
+    color: #17212b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 28px;
+
+}
+
+
+.cadastro-usuario-header p {
+
+    margin: 0;
+
+    color: #6b7280;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+}
+
+
+.cadastro-usuario-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.cadastro-usuario-campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.cadastro-usuario-campo label {
+
+    color: #17212b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.cadastro-usuario-campo input {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #ccd5df;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+
+}
+
+
+.cadastro-usuario-campo input:focus {
+
+    border-color: #33095a;
+
+    box-shadow:
+        0 0 0 3px rgba(31, 111, 235, 0.10);
+
+}
+
+
+.botao-criar-conta {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #33095a;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.botao-criar-conta:hover {
+
+    background: #33095a;
+
+    transform: translateY(-1px);
+
+}
+
+
+.botao-criar-conta:disabled {
+
+    background: #9ca3af;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+.botao-voltar-login {
+
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #ccd5df;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #33095a;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.botao-voltar-login:hover {
+
+    background: #f0f6ff;
+
+    border-color: #33095a;
+
+}
+
+
+.cadastro-usuario-mensagem {
+
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.cadastro-usuario-mensagem.erro {
+
+    background: #fff1f2;
+
+    border: 1px solid #f5c2c7;
+
+    color: #b02a37;
+
+}
+
+
+.cadastro-usuario-mensagem.sucesso {
+
+    background: #ecfdf3;
+
+    border: 1px solid #a3cfbb;
+
+    color: #146c43;
+
+}
+
+
+@media (max-width: 500px) {
+
+    .cadastro-usuario {
+
+        padding: 15px;
+
+    }
+
+    .cadastro-usuario-container {
+
+        padding: 25px 20px;
+
+    }
+
+}

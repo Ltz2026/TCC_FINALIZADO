@@ -1,0 +1,414 @@
+.home {
+    width: 100%;
+    background: #f3f4f6;
+}
+
+.home-container {
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   BANNER
+========================================= */
+
+.home-banner {
+    width: 100%;
+    min-height: 420px;
+
+    padding: 60px 5%;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #1f2937
+    );
+
+    color: white;
+
+    box-sizing: border-box;
+}
+
+.banner-conteudo span {
+    color: #60a5fa;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.banner-conteudo h1 {
+    max-width: 650px;
+
+    margin: 15px 0;
+
+    font-size: 46px;
+    line-height: 1.15;
+}
+
+.banner-conteudo p {
+    max-width: 580px;
+
+    color: #d1d5db;
+
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.banner-botao {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.banner-botao:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+.banner-card {
+    padding: 35px;
+
+    border: 1px solid #374151;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    text-align: center;
+}
+
+.banner-card-icone {
+    margin-bottom: 15px;
+
+    font-size: 70px;
+}
+
+.banner-card h2 {
+    margin-bottom: 10px;
+}
+
+.banner-card p {
+    color: #d1d5db;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+.home-titulo {
+    margin-bottom: 30px;
+}
+
+.home-titulo h2 {
+    margin-bottom: 8px;
+
+    color: #111827;
+
+    font-size: 30px;
+}
+
+.home-titulo p {
+    color: #6b7280;
+}
+
+
+/* =========================================
+   CATEGORIAS
+========================================= */
+
+.home-categorias {
+    padding: 60px 0;
+}
+
+.categorias-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.categoria-home-card {
+    padding: 30px 20px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    background: white;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.categoria-home-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 8px 20px rgba(31, 111, 235, 0.12);
+}
+
+.categoria-home-card div {
+    margin-bottom: 12px;
+
+    font-size: 42px;
+}
+
+.categoria-home-card h3 {
+    color: #111827;
+}
+
+
+
+
+
+/* =========================================
+   BENEFÍCIOS
+========================================= */
+
+.home-beneficios {
+    width: 100%;
+
+    padding: 70px 0;
+
+    background: #f3f4f6;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   GRID DOS BENEFÍCIOS
+========================================= */
+
+.beneficios-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================
+   CARD DO BENEFÍCIO
+========================================= */
+
+.beneficio {
+    min-height: 190px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 2px solid #33095a;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    box-shadow:
+        0 6px 18px rgba(31, 111, 235, 0.10);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* =========================================
+   EFEITO HOVER
+========================================= */
+
+.beneficio:hover {
+    transform: translateY(-5px);
+
+    border-color: #33095a;
+
+    box-shadow:
+        0 10px 25px rgba(31, 111, 235, 0.20);
+}
+
+
+/* =========================================
+   ICONE
+========================================= */
+
+.beneficio-icone {
+    width: 50px;
+
+    height: 50px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef5ff;
+
+    border: 1px solid #33095a;
+
+    color: #33095a;
+
+    font-size: 23px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TITULO DO BENEFICIO
+========================================= */
+
+.beneficio h3 {
+    margin: 0 0 8px;
+
+    color: #17212b;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TEXTO DO BENEFICIO
+========================================= */
+
+.beneficio p {
+    margin: 0;
+
+    max-width: 380px;
+
+    color: #687583;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .home-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .categorias-grid,
+    .home-produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .home-banner {
+        padding: 45px 20px;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 34px;
+    }
+
+    .home-container {
+        padding: 0 20px;
+    }
+
+    .categorias-grid,
+    .home-produtos-grid,
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-titulo-produtos {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .home-beneficios {
+        padding: 50px 0;
+    }
+
+    .beneficio {
+        min-height: 175px;
+
+        padding: 25px;
+    }
+}
+
+/* =========================================
+   IMAGEM PRINCIPAL DA HOME
+========================================= */
+
+.imagemtelainteira {
+    width: 100%;
+    height: 850px;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center bottom;
+
+    margin: 0;
+    padding-top: 0px;
+
+    border: none;
+}

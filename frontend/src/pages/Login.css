@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================
+   PÁGINA DE LOGIN
+========================================= */
+
+.login {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #f3f4f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================
+   CARD PRINCIPAL
+========================================= */
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+
+    background: #ffffff;
+
+    border: 2px solid #33095a;
+
+    border-radius: 14px;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 8px 25px rgba(31, 111, 235, 0.12);
+}
+
+
+/* =========================================
+   CABEÇALHO DO LOGIN
+========================================= */
+
+.login-header {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.login-header h1 {
+    margin: 0 0 8px;
+
+    color: #17212b;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+.login-header p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   MENSAGEM DE ERRO
+========================================= */
+
+.login-erro {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    margin-bottom: 20px;
+
+    box-sizing: border-box;
+
+    background: #fff1f2;
+
+    border: 1px solid #f5c2c7;
+
+    border-radius: 8px;
+
+    color: #b02a37;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.login-form {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.login-campo {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.login-campo label {
+    color: #17212b;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.login-campo input {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 14px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ccd5df;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #17212b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.login-campo input::placeholder {
+    color: #9ca3af;
+}
+
+
+.login-campo input:focus {
+    border-color: #33095a;
+
+    box-shadow:
+        0 0 0 3px rgba(31, 111, 235, 0.10);
+}
+
+
+.login-campo input:disabled {
+    background: #f3f4f6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   BOTÃO ENTRAR
+========================================= */
+
+.login-form button[type="submit"] {
+    width: 100%;
+
+    height: 46px;
+
+    margin-top: 4px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #33095a;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.login-form button[type="submit"]:hover {
+    background: #33095a;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(31, 111, 235, 0.25);
+}
+
+
+.login-form button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+
+.login-form button[type="submit"]:disabled {
+    background: #9ca3af;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   ÁREA DE CADASTRO
+========================================= */
+
+.login-cadastro {
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #e5e7eb;
+
+    text-align: center;
+}
+
+
+.login-cadastro p {
+    margin: 0 0 10px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   BOTÃO CRIAR CONTA
+========================================= */
+
+.login-cadastro button {
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #33095a;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.login-cadastro button:hover {
+    color: #33095a;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   ÁREA DO GERENTE
+========================================= */
+
+.login-gerente {
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 500px) {
+
+    .login {
+        padding: 15px;
+    }
+
+
+    .login-container {
+        padding: 28px 22px;
+    }
+
+
+    .login-header h1 {
+        font-size: 28px;
+    }
+
+}
