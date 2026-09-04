@@ -1,0 +1,268 @@
+.cadastro-produto {
+    width: 100%;
+    min-height: 650px;
+
+    padding: 50px 5%;
+
+    background: #f3f4f6;
+}
+
+.cadastro-container {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+.cadastro-header {
+    margin-bottom: 30px;
+}
+
+.cadastro-header h1 {
+    margin: 0 0 8px;
+
+    color: #111827;
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.cadastro-header p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 16px;
+}
+
+.cadastro-form {
+    width: 100%;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 22px;
+}
+
+.campo label {
+    margin-bottom: 8px;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.campo textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #33095a;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #9ca3af;
+}
+
+.campo small {
+    margin-top: 6px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+.campo-duplo {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.campo-duplo .campo {
+    margin-bottom: 22px;
+}
+
+.botao-cadastrar {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #33095a;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao-cadastrar:hover {
+    background: #33095a;
+}
+
+.botao-cadastrar:disabled {
+    background: #93c5fd;
+
+    cursor: not-allowed;
+}
+
+.mensagem {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-bottom: 20px;
+
+    padding: 14px 16px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+.mensagem.sucesso {
+    background: #dcfce7;
+
+    border: 1px solid #86efac;
+
+    color: #166534;
+}
+
+.mensagem.erro {
+    background: #fee2e2;
+
+    border: 1px solid #fca5a5;
+
+    color: #991b1b;
+}
+
+.preview {
+    margin-bottom: 25px;
+
+    padding: 15px;
+
+    background: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+}
+
+.preview p {
+    margin: 0 0 10px;
+
+    color: #374151;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.preview img {
+    display: block;
+
+    width: 200px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    border: 1px solid #e5e7eb;
+}
+
+/* Tablet */
+
+@media (max-width: 700px) {
+
+    .cadastro-produto {
+        padding: 35px 20px;
+    }
+
+    .cadastro-form {
+        padding: 25px;
+    }
+
+    .campo-duplo {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+}
+
+/* Celular */
+
+@media (max-width: 450px) {
+
+    .cadastro-produto {
+        padding: 25px 15px;
+    }
+
+    .cadastro-header h1 {
+        font-size: 26px;
+    }
+
+    .cadastro-form {
+        padding: 20px;
+    }
+
+}

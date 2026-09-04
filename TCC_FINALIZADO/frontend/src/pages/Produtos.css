@@ -1,0 +1,216 @@
+.produtos {
+    width: 100%;
+
+    min-height: 600px;
+
+    padding: 40px 5%;
+
+    background: #f3f4f6;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.produtos-container {
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.produtos-titulo {
+    margin-bottom: 25px;
+}
+
+
+.produtos-titulo h1 {
+    margin-bottom: 8px;
+
+    color: #111827;
+
+    font-size: 32px;
+}
+
+
+.produtos-titulo p {
+    color: #6b7280;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   GRID DOS PRODUTOS
+========================================= */
+
+.produtos-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    /* espaço entre os cards */
+    gap: 15px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.produtos-status {
+    width: 100%;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    background: #f3f4f6;
+
+    color: #111827;
+}
+
+
+.produtos-status.erro {
+    color: #dc2626;
+}
+
+
+.produtos-status button {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #33095a;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.produtos-status button:hover {
+    background: #33095a;
+}
+
+
+/* =========================================
+   NENHUM PRODUTO
+========================================= */
+
+.produtos-vazio {
+    width: 100%;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+
+    box-sizing: border-box;
+}
+
+
+.produtos-vazio h2 {
+    margin-bottom: 10px;
+
+    color: #111827;
+}
+
+
+.produtos-vazio p {
+    color: #6b7280;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .produtos-grid {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET PEQUENO
+========================================= */
+
+@media (max-width: 800px) {
+
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 550px) {
+
+    .produtos {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .produtos-titulo {
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .produtos-titulo h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .produtos-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+}

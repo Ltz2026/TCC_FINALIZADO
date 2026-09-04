@@ -1,0 +1,12 @@
+.app {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.app-conteudo {
+    width: 100%;
+    flex: 1;
+}

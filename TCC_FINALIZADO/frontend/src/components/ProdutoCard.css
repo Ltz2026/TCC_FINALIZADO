@@ -1,0 +1,338 @@
+/* =========================================
+   CARD DO PRODUTO
+========================================= */
+
+.produto-card {
+    width: 100%;
+    max-width: none;
+
+    background: #ffffff;
+
+    border: 2px solid #33095a;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 4px 12px rgba(31, 111, 235, 0.10);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* =========================================
+   EFEITO AO PASSAR O MOUSE
+========================================= */
+
+.produto-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #33095a;
+
+    box-shadow:
+        0 10px 25px rgba(31, 111, 235, 0.20);
+}
+
+
+/* =========================================
+   IMAGEM DO PRODUTO
+========================================= */
+
+.produto-imagem {
+    width: 100%;
+    height: 200px;
+
+    object-fit: contain;
+
+    display: block;
+
+    background: #f3f6fa;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #dce8f7;
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+.produto-info {
+
+    padding: 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* =========================================
+   NOME
+========================================= */
+
+.produto-info h3 {
+
+    margin: 0;
+
+    color: #17212b;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   DESCRIÇÃO
+========================================= */
+
+.produto-info p {
+
+    margin: 0;
+
+    color: #687583;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    min-height: 40px;
+}
+
+
+/* =========================================
+   PREÇO
+========================================= */
+
+.produto-info strong {
+
+    color: #33095a;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   ESTOQUE
+========================================= */
+
+.produto-info > span {
+
+    width: fit-content;
+
+    padding: 5px 9px;
+
+    background: #eef5ff;
+
+    color: #33095a;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BOTÃO COMPRAR
+========================================= */
+
+.botao-comprar {
+
+    width: 100%;
+
+    margin-top: 6px;
+
+    padding: 11px 16px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #33095a;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.botao-comprar:hover {
+
+    background: #33095a;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(31, 111, 235, 0.25);
+}
+
+
+.botao-comprar:active {
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ÁREA DOS BOTÕES DO GERENTE
+========================================= */
+
+.produto-acoes {
+
+    width: 100%;
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 6px;
+}
+
+
+/* =========================================
+   BOTÃO EDITAR
+========================================= */
+
+.botao-editar {
+
+    flex: 1;
+
+    padding: 10px 12px;
+
+    border: 1px solid #1f6feb;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #1f6feb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.botao-editar:hover {
+
+    background: #1f6feb;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   BOTÃO EXCLUIR
+========================================= */
+
+.botao-excluir {
+
+    flex: 1;
+
+    padding: 10px 12px;
+
+    border: 1px solid #dc3545;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #dc3545;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.botao-excluir:hover {
+
+    background: #dc3545;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .produto-imagem {
+
+        height: 190px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .produto-card {
+
+        max-width: 100%;
+
+    }
+
+
+    .produto-imagem {
+
+        height: 220px;
+
+    }
+
+
+    .produto-info {
+
+        padding: 18px;
+
+    }
+
+}
