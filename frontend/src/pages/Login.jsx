@@ -1,26 +1,20 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import "./Login.css";
 
 function Login() {
-
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
-
     const [erro, setErro] = useState("");
     const [carregando, setCarregando] = useState(false);
 
     useEffect(() => {
-
         const usuarioSalvo = localStorage.getItem("usuario");
 
         if (usuarioSalvo) {
-
             try {
-
                 const usuario = JSON.parse(usuarioSalvo);
 
                 if (usuario.tipo === "gerente") {
@@ -30,16 +24,13 @@ function Login() {
                 }
 
             } catch (error) {
-
                 localStorage.removeItem("usuario");
-
             }
         }
 
     }, [navigate]);
 
     async function fazerLogin(event) {
-
         event.preventDefault();
 
         setErro("");
@@ -49,17 +40,10 @@ function Login() {
             return;
         }
 
-        /*
-        ==========================================
-        LOGIN DO GERENTE
-        ==========================================
-        */
-
         if (
             email.toLowerCase().trim() === "gerente@minhaloja.com" &&
             senha === "123456"
         ) {
-
             const gerente = {
                 id: "gerente",
                 nome: "Gerente",
@@ -79,25 +63,16 @@ function Login() {
             return;
         }
 
-        /*
-        ==========================================
-        LOGIN DOS USUÁRIOS NORMAIS
-        ==========================================
-        */
-
         try {
-
             setCarregando(true);
 
             const resposta = await fetch(
                 "http://localhost:3001/usuarios/login",
                 {
                     method: "POST",
-
                     headers: {
                         "Content-Type": "application/json"
                     },
-
                     body: JSON.stringify({
                         email: email.trim(),
                         senha: senha
@@ -111,6 +86,7 @@ function Login() {
 
             try {
                 dados = JSON.parse(texto);
+
             } catch {
                 throw new Error(
                     "O servidor não retornou uma resposta válida."
@@ -118,7 +94,6 @@ function Login() {
             }
 
             if (!resposta.ok) {
-
                 throw new Error(
                     dados.mensagem ||
                     dados.message ||
@@ -143,7 +118,6 @@ function Login() {
             });
 
         } catch (error) {
-
             console.error(error);
 
             setErro(
@@ -152,25 +126,18 @@ function Login() {
             );
 
         } finally {
-
             setCarregando(false);
         }
     }
 
     return (
-
         <main className="login">
-
             <div className="login-container">
-
                 <div className="login-header">
-
                     <h1>LtStore</h1>
-
                     <p>
                         Entre na sua conta
                     </p>
-
                 </div>
 
                 {erro && (
@@ -183,9 +150,7 @@ function Login() {
                     className="login-form"
                     onSubmit={fazerLogin}
                 >
-
                     <div className="login-campo">
-
                         <label htmlFor="email">
                             E-mail
                         </label>
@@ -200,11 +165,9 @@ function Login() {
                             }
                             disabled={carregando}
                         />
-
                     </div>
 
                     <div className="login-campo">
-
                         <label htmlFor="senha">
                             Senha
                         </label>
@@ -219,7 +182,6 @@ function Login() {
                             }
                             disabled={carregando}
                         />
-
                     </div>
 
                     <button
@@ -231,11 +193,9 @@ function Login() {
                             : "Entrar"
                         }
                     </button>
-
                 </form>
 
                 <div className="login-cadastro">
-
                     <p>
                         Ainda não possui uma conta?
                     </p>
@@ -248,16 +208,12 @@ function Login() {
                     >
                         Criar uma conta
                     </button>
-
                 </div>
 
                 <div className="login-gerente">
 
-                    
                 </div>
-
             </div>
-
         </main>
     );
 }

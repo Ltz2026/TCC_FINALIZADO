@@ -8,10 +8,8 @@ import AppRoutes from "./routes/AppRoutes";
 
 
 function Layout() {
-
     const location = useLocation();
 
-    // Páginas que não devem mostrar Header/Navbar/Footer
     const paginasSemLayout =
         location.pathname === "/" ||
         location.pathname === "/cadastro-usuario";
@@ -19,38 +17,24 @@ function Layout() {
 
     return (
         <>
-
             {!paginasSemLayout && <Header />}
-
             {!paginasSemLayout && <Navbar />}
-
 
             <main>
                 <AppRoutes />
             </main>
 
-
             {!paginasSemLayout && <Footer />}
-
         </>
     );
-
 }
-
 
 function App() {
-
     return (
-
         <BrowserRouter>
-
             <Layout />
-
         </BrowserRouter>
-
     );
-
 }
-
 
 export default App;

@@ -16,55 +16,36 @@ function AppRoutes() {
 
         <Routes>
 
-            {/* LOGIN */}
 
             <Route
                 path="/"
                 element={<Login />}
             />
 
-
-            {/* CADASTRO DE USUÁRIO */}
-
             <Route
                 path="/cadastro-usuario"
                 element={<CadastroUsuario />}
             />
-
-
-            {/* HOME */}
 
             <Route
                 path="/home"
                 element={<Home />}
             />
 
-
-            {/* PRODUTOS */}
-
             <Route
                 path="/produtos"
                 element={<Produtos />}
             />
-
-
-            {/* CADASTRO DE PRODUTO */}
 
             <Route
                 path="/cadastro-produto"
                 element={<CadastroProduto />}
             />
 
-
-            {/* EDITAR PRODUTO */}
-
             <Route
                 path="/editar/:id"
                 element={<Editar />}
             />
-
-
-            {/* CARRINHO */}
 
             <Route
                 path="/carrinho"
@@ -76,9 +57,6 @@ function AppRoutes() {
                 element={<Pedido />}
             />
 
-
-            {/* ROTA DESCONHECIDA */}
-
             <Route
                 path="*"
                 element={
@@ -88,7 +66,6 @@ function AppRoutes() {
                     />
                 }
             />
-
         </Routes>
 
     );

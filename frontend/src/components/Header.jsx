@@ -18,53 +18,32 @@ function Header() {
         }
     }
 
-
     function sair() {
-
         localStorage.removeItem("usuario");
-
         navigate("/");
 
     }
 
-
     return (
-
         <header className="header">
-
             <div className="header-container">
-
-
-                {/* LOGO */}
-
                 <img
                     src={logo}
                     alt="LtStore"
                     className="logo"
                 />  
-
-
-                {/* USUÁRIO */}
-
                 <div className="header-usuario">
-
-
                     <div className="header-usuario-info">
-
                         <div className="header-avatar">
-
                             {usuario?.nome
                                 ? usuario.nome
                                     .charAt(0)
                                     .toUpperCase()
                                 : "U"
                             }
-
                         </div>
 
-
                         <div className="header-usuario-texto">
-
                             <span>
                                 Olá,
                             </span>
@@ -72,35 +51,22 @@ function Header() {
                             <strong>
                                 {usuario?.nome || "Usuário"}
                             </strong>
-
                         </div>
-
                     </div>
-
-
-                    {/* BOTÃO SAIR */}
 
                     <button
                         className="header-botao-sair"
                         onClick={sair}
                     >
-
                         <span>
                             ↪
                         </span>
-
                         Sair
-
                     </button>
-
                 </div>
-
             </div>
-
         </header>
-
     );
-
 }
 
 export default Header;

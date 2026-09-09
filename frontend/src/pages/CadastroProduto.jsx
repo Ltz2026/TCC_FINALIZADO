@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./CadastroProduto.css";
 
 function CadastroProduto() {
-
     const [formulario, setFormulario] = useState({
         nome: "",
         descricao: "",
@@ -16,7 +15,6 @@ function CadastroProduto() {
     const [carregando, setCarregando] = useState(false);
 
     function handleChange(event) {
-
         const { name, value } = event.target;
 
         setFormulario({
@@ -26,7 +24,6 @@ function CadastroProduto() {
     }
 
     async function cadastrarProduto(event) {
-
         event.preventDefault();
 
         setMensagem("");
@@ -53,7 +50,6 @@ function CadastroProduto() {
         }
 
         try {
-
             setCarregando(true);
 
             const produto = {
@@ -70,11 +66,9 @@ function CadastroProduto() {
                 "http://localhost:3001/produtos",
                 {
                     method: "POST",
-
                     headers: {
                         "Content-Type": "application/json"
                     },
-
                     body: JSON.stringify(produto)
                 }
             );
@@ -86,11 +80,8 @@ function CadastroProduto() {
             let dados;
 
             try {
-
                 dados = JSON.parse(texto);
-
             } catch {
-
                 console.error(
                     "Resposta não é JSON:",
                     texto
@@ -102,7 +93,6 @@ function CadastroProduto() {
             }
 
             if (!resposta.ok) {
-
                 throw new Error(
                     dados.mensagem ||
                     dados.message ||
@@ -126,9 +116,7 @@ function CadastroProduto() {
                 estoque: "",
                 imagem: ""
             });
-
         } catch (error) {
-
             console.error(
                 "Erro ao cadastrar produto:",
                 error
@@ -138,32 +126,27 @@ function CadastroProduto() {
                 error.message ||
                 "Não foi possível cadastrar o produto."
             );
-
         } finally {
-
             setCarregando(false);
         }
     }
 
     return (
-
         <section className="cadastro-produto">
             <div className="cadastro-container">
                 <div className="cadastro-header">
-                    <h1>
-                        Cadastrar Produto
-                    </h1>
+                    <h1>Cadastrar Produto</h1>
+
                     <p>
                         Adicione um novo produto à sua loja.
                     </p>
                 </div>
-                {/* Mensagem de sucesso */}
+
                 {mensagem && (
                     <div className="mensagem sucesso">
                         {mensagem}
                     </div>
-                )}  
-                {/* Mensagem de erro */}
+                )}
 
                 {erro && (
                     <div className="mensagem erro">
@@ -175,11 +158,7 @@ function CadastroProduto() {
                     className="cadastro-form"
                     onSubmit={cadastrarProduto}
                 >
-
-                    {/* Nome */}
-
                     <div className="campo">
-
                         <label htmlFor="nome">
                             Nome do produto *
                         </label>
@@ -193,13 +172,9 @@ function CadastroProduto() {
                             placeholder="Ex: Notebook Gamer"
                             disabled={carregando}
                         />
-
                     </div>
 
-                    {/* Descrição */}
-
                     <div className="campo">
-
                         <label htmlFor="descricao">
                             Descrição *
                         </label>
@@ -213,13 +188,9 @@ function CadastroProduto() {
                             rows="5"
                             disabled={carregando}
                         />
-
                     </div>
 
-                    {/* Preço */}
-
                     <div className="campo">
-
                         <label htmlFor="preco">
                             Preço *
                         </label>
@@ -235,13 +206,9 @@ function CadastroProduto() {
                             step="0.01"
                             disabled={carregando}
                         />
-
                     </div>
 
-                    {/* Estoque */}
-
                     <div className="campo">
-
                         <label htmlFor="estoque">
                             Estoque *
                         </label>
@@ -257,13 +224,9 @@ function CadastroProduto() {
                             step="1"
                             disabled={carregando}
                         />
-
                     </div>
 
-                    {/* Imagem */}
-
                     <div className="campo">
-
                         <label htmlFor="imagem">
                             Imagem do produto
                         </label>
@@ -277,28 +240,19 @@ function CadastroProduto() {
                             placeholder="Cole aqui a URL da imagem"
                             disabled={carregando}
                         />
-
                     </div>
-
-                    {/* Botão */}
 
                     <button
                         type="submit"
                         className="botao-cadastrar"
                         disabled={carregando}
                     >
-
                         {carregando
                             ? "Cadastrando..."
-                            : "Cadastrar Produto"
-                        }
-
+                            : "Cadastrar Produto"}
                     </button>
-
                 </form>
-
             </div>
-
         </section>
     );
 }
